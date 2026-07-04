@@ -1,0 +1,327 @@
+/*==================================================
+                FOOTER
+==================================================*/
+
+.footer{
+
+    position:relative;
+
+    width:100%;
+
+    padding:120px 20px 80px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+/*==================================================
+                PURPLE GLOW
+==================================================*/
+
+.footer-glow{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:750px;
+
+    height:750px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(125,80,255,.15),
+            transparent 70%
+        );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+/*==================================================
+                TOP LINE
+==================================================*/
+
+.footer-line{
+
+    width:min(720px,90%);
+
+    height:2px;
+
+    margin-bottom:55px;
+
+    transform-origin:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff63c9,
+            #ffd56d,
+            #8b5cf6,
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 18px rgba(255,95,197,.25);
+
+}
+
+/*==================================================
+                HEART
+==================================================*/
+
+.footer-heart{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    font-size:32px;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5fc5,
+            #7d5cff
+        );
+
+    box-shadow:
+
+        0 18px 45px rgba(255,95,197,.35);
+
+}
+
+/*==================================================
+                TITLE
+==================================================*/
+
+.footer h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #ffe2fb,
+            #ff77d8
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+/*==================================================
+                SUBTITLE
+==================================================*/
+
+.footer h3{
+
+    color:#ffb0df;
+
+    font-weight:500;
+
+    font-size:1.5rem;
+
+    margin-bottom:40px;
+
+}
+
+/*==================================================
+                QUOTE
+==================================================*/
+
+.footer-quote{
+
+    max-width:700px;
+
+    color:rgba(255,255,255,.76);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    font-style:italic;
+
+    margin-bottom:70px;
+
+}
+
+/*==================================================
+                BOTTOM
+==================================================*/
+
+.footer-bottom{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.footer-bottom p{
+
+    color:#d8c8ff;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+}
+
+.footer-bottom h4{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:2.5rem;
+
+    color:#ff7fd9;
+
+    font-weight:400;
+
+}
+
+/*==================================================
+                THANK YOU
+==================================================*/
+
+.footer-thanks{
+
+    margin-top:60px;
+
+    color:#e2d5ff;
+
+    letter-spacing:2px;
+
+    font-size:.95rem;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+.footer{
+
+padding:90px 20px 70px;
+
+}
+
+.footer-heart{
+
+width:68px;
+height:68px;
+font-size:28px;
+
+}
+
+.footer h2{
+
+font-size:2.8rem;
+
+}
+
+.footer h3{
+
+font-size:1.2rem;
+
+}
+
+.footer-quote{
+
+font-size:.95rem;
+
+line-height:1.8;
+
+}
+
+.footer-bottom h4{
+
+font-size:2rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.footer{
+
+padding:80px 16px 60px;
+
+}
+
+.footer h2{
+
+font-size:2.2rem;
+
+}
+
+.footer h3{
+
+font-size:1rem;
+
+}
+
+.footer-quote{
+
+font-size:.9rem;
+
+}
+
+.footer-thanks{
+
+font-size:.82rem;
+
+}
+
+}

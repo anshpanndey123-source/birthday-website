@@ -1,0 +1,819 @@
+/* ======================================================
+   BACKGROUND V2
+   Luxury Birthday Theme
+====================================================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-100;
+
+    background:
+        linear-gradient(
+            180deg,
+            #090312 0%,
+            #11061f 40%,
+            #090312 100%
+        );
+}
+/* Three.js Canvas */
+
+.background canvas{
+
+    position:absolute !important;
+
+    inset:0;
+
+    width:100% !important;
+
+    height:100% !important;
+
+    z-index:5;
+
+}
+
+/* ======================================================
+   BASE GRADIENT
+====================================================== */
+
+.gradient-layer{
+
+    position:absolute;
+
+    inset:-10%;
+
+    z-index:1;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(138,92,246,.32),
+    transparent 28%),
+
+    radial-gradient(circle at 85% 25%,
+    rgba(255,70,220,.18),
+    transparent 26%),
+
+    radial-gradient(circle at 50% 85%,
+    rgba(111,44,255,.30),
+    transparent 32%),
+
+    radial-gradient(circle at 75% 75%,
+    rgba(255,120,180,.08),
+    transparent 22%),
+
+    linear-gradient(
+    180deg,
+
+    #06020d 0%,
+
+    #0a0416 20%,
+
+    #10061f 45%,
+
+    #130824 70%,
+
+    #080312 100%
+    );
+
+    animation:gradientScale 22s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   VIGNETTE
+====================================================== */
+
+.background::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle,
+transparent 45%,
+rgba(0,0,0,.22) 75%,
+rgba(0,0,0,.55) 100%);
+
+z-index:20;
+
+}
+
+/* ======================================================
+   NOISE
+====================================================== */
+
+.noise{
+
+position:absolute;
+
+inset:0;
+
+z-index:18;
+
+opacity:.035;
+
+background-image:
+
+radial-gradient(#ffffff .5px,transparent .5px);
+
+background-size:4px 4px;
+
+mix-blend-mode:soft-light;
+
+}
+
+/* ======================================================
+   NEBULA BASE
+====================================================== */
+
+.nebula{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(140px);
+
+opacity:.45;
+
+mix-blend-mode:screen;
+
+}
+
+/* LEFT */
+
+.nebula1{
+
+width:650px;
+
+height:650px;
+
+left:-220px;
+
+top:-150px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(143,76,255,.9),
+
+rgba(143,76,255,.25),
+
+transparent 72%);
+
+animation:floatOne 22s ease-in-out infinite alternate;
+
+}
+
+/* RIGHT */
+
+.nebula2{
+
+width:620px;
+
+height:620px;
+
+right:-180px;
+
+top:120px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,70,220,.75),
+
+rgba(255,70,220,.18),
+
+transparent 70%);
+
+animation:floatTwo 26s ease-in-out infinite alternate;
+
+}
+
+/* BOTTOM */
+
+.nebula3{
+
+width:900px;
+
+height:900px;
+
+left:50%;
+
+bottom:-420px;
+
+transform:translateX(-50%);
+
+background:
+
+radial-gradient(circle,
+
+rgba(98,70,255,.72),
+
+rgba(98,70,255,.15),
+
+transparent 75%);
+
+animation:floatThree 28s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   GLOW BLOBS
+====================================================== */
+
+.glow{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.35;
+
+}
+
+/* Purple */
+
+.glow1{
+
+width:420px;
+
+height:420px;
+
+background:#7b3cff;
+
+top:10%;
+
+left:10%;
+
+animation:blobOne 18s infinite alternate;
+
+}
+
+/* Pink */
+
+.glow2{
+
+width:350px;
+
+height:350px;
+
+background:#ff59cb;
+
+top:18%;
+
+right:8%;
+
+animation:blobTwo 16s infinite alternate;
+
+}
+
+/* Violet */
+
+.glow3{
+
+width:520px;
+
+height:520px;
+
+background:#5d3cff;
+
+bottom:-150px;
+
+left:35%;
+
+animation:blobThree 24s infinite alternate;
+
+}
+
+
+/* ======================================================
+   AURORA LIGHTS
+====================================================== */
+
+.aurora{
+    position:absolute;
+    inset:0;
+    z-index:4;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.aurora::before,
+.aurora::after{
+
+content:"";
+
+position:absolute;
+
+width:1200px;
+height:1200px;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+opacity:.18;
+
+mix-blend-mode:screen;
+
+}
+
+.aurora::before{
+
+left:-250px;
+top:-350px;
+
+background:
+radial-gradient(circle,
+rgba(142,88,255,.9),
+transparent 70%);
+
+animation:auroraLeft 20s ease-in-out infinite alternate;
+
+}
+
+.aurora::after{
+
+right:-300px;
+bottom:-300px;
+
+background:
+radial-gradient(circle,
+rgba(255,90,210,.8),
+transparent 70%);
+
+animation:auroraRight 24s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   TOP LIGHT
+====================================================== */
+
+.top-light{
+
+position:absolute;
+
+top:-250px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:1400px;
+height:600px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(170,120,255,.18),
+transparent 70%);
+
+filter:blur(120px);
+
+z-index:2;
+
+animation:topLight 18s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   BOTTOM GLOW
+====================================================== */
+
+.bottom-glow{
+
+position:absolute;
+
+bottom:-300px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:1200px;
+height:700px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(110,60,255,.28),
+transparent 72%);
+
+filter:blur(150px);
+
+z-index:2;
+
+animation:bottomGlow 20s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   FOG
+====================================================== */
+
+.fog{
+
+position:absolute;
+
+left:-15%;
+bottom:-5%;
+
+width:130%;
+height:45%;
+
+background:
+
+radial-gradient(circle at 50% 100%,
+rgba(255,255,255,.05),
+transparent 70%),
+
+radial-gradient(circle at 20% 100%,
+rgba(130,80,255,.12),
+transparent 60%),
+
+radial-gradient(circle at 80% 100%,
+rgba(255,90,210,.08),
+transparent 60%);
+
+filter:blur(90px);
+
+opacity:.8;
+
+z-index:6;
+
+animation:fogMove 30s ease-in-out infinite alternate;
+
+}
+
+/* ======================================================
+   LIGHT RAYS
+====================================================== */
+
+.light-rays{
+
+position:absolute;
+
+inset:0;
+
+z-index:3;
+
+background:
+
+linear-gradient(
+110deg,
+transparent 0%,
+rgba(255,255,255,.015) 40%,
+transparent 70%
+);
+
+opacity:.6;
+
+animation:rayMove 18s linear infinite;
+
+}
+
+/* ======================================================
+   KEYFRAMES
+====================================================== */
+
+@keyframes auroraLeft{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+100%{
+transform:translate(180px,120px) scale(1.15);
+}
+
+}
+
+@keyframes auroraRight{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+100%{
+transform:translate(-180px,-120px) scale(1.12);
+}
+
+}
+
+@keyframes topLight{
+
+0%{
+opacity:.15;
+transform:translateX(-50%) scale(1);
+}
+
+100%{
+opacity:.25;
+transform:translateX(-50%) scale(1.08);
+}
+
+}
+
+@keyframes bottomGlow{
+
+0%{
+transform:translateX(-50%) scale(1);
+}
+
+100%{
+transform:translateX(-50%) scale(1.12);
+}
+
+}
+
+@keyframes fogMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-35px);
+}
+
+}
+
+@keyframes rayMove{
+
+from{
+transform:translateX(-20%);
+}
+
+to{
+transform:translateX(20%);
+}
+
+}
+
+/* Existing animations used in Part 1 */
+
+@keyframes gradientScale{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
+
+@keyframes floatOne{
+0%{transform:translate(0,0);}
+100%{transform:translate(180px,90px);}
+}
+
+@keyframes floatTwo{
+0%{transform:translate(0,0);}
+100%{transform:translate(-160px,-90px);}
+}
+
+@keyframes floatThree{
+0%{transform:translate(-50%,-20px);}
+100%{transform:translate(-50%,20px);}
+}
+
+@keyframes blobOne{
+0%{transform:translate(0,0);}
+100%{transform:translate(100px,80px);}
+}
+
+@keyframes blobTwo{
+0%{transform:translate(0,0);}
+100%{transform:translate(-80px,60px);}
+}
+
+@keyframes blobThree{
+0%{transform:translate(0,0);}
+100%{transform:translate(120px,-80px);}
+}
+
+
+/*======================================
+HERO SPOTLIGHT
+======================================*/
+
+.hero-spotlight{
+
+    position:absolute;
+
+    top:50%;
+
+    left:72%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(140,90,255,.28) 0%,
+        rgba(120,70,255,.15) 35%,
+        transparent 72%
+    );
+
+    filter:blur(80px);
+
+    animation:spotlightPulse 8s ease-in-out infinite;
+
+}
+
+
+/*======================================
+PURPLE OVERLAY
+======================================*/
+
+.purple-overlay{
+
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+
+    background:
+
+    radial-gradient(
+        circle at 70% 35%,
+        rgba(140,85,255,.18),
+        transparent 42%
+    ),
+
+    radial-gradient(
+        circle at 20% 18%,
+        rgba(170,100,255,.10),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(120,70,255,.14),
+        transparent 55%
+    );
+
+    mix-blend-mode:screen;
+}
+
+/*======================================
+TWINKLE STARS
+======================================*/
+
+.twinkle-stars{
+
+position:absolute;
+
+inset:0;
+
+z-index:15;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.twinkle-star{
+
+position:absolute;
+
+width:2px;
+
+height:2px;
+
+border-radius:50%;
+
+background:white;
+
+opacity:.25;
+
+box-shadow:
+
+0 0 8px white,
+
+0 0 18px #8b5cf6,
+
+0 0 28px #ff4fd8;
+
+animation:twinkle 4s infinite ease-in-out;
+
+}
+
+.twinkle-star:nth-child(5n){
+
+    width:3px;
+
+    height:3px;
+
+}
+
+.twinkle-star:nth-child(8n){
+
+    width:4px;
+
+    height:4px;
+
+    background:#FFD98A;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+
+transform:scale(.4);
+
+}
+
+25%{
+
+opacity:1;
+
+transform:scale(1.7);
+
+}
+
+50%{
+
+opacity:.35;
+
+transform:scale(.8);
+
+}
+
+75%{
+
+opacity:.95;
+
+transform:scale(1.4);
+
+}
+
+100%{
+
+opacity:.2;
+
+transform:scale(.5);
+
+}
+
+}
+
+
+@keyframes spotlightPulse{
+
+0%{
+
+transform:
+translate(-50%,-50%)
+
+scale(1);
+
+opacity:.55;
+
+}
+
+50%{
+
+transform:
+translate(-50%,-50%)
+
+scale(1.12);
+
+opacity:.95;
+
+}
+
+100%{
+
+transform:
+translate(-50%,-50%)
+
+scale(1);
+
+opacity:.55;
+
+}
+
+}

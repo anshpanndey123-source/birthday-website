@@ -1,0 +1,335 @@
+/*==================================================
+                LOVE LETTER
+==================================================*/
+
+.love-letter{
+    position: relative;
+    width: 100%;
+    padding: 140px 20px;
+    overflow: hidden;
+}
+
+/*==================================================
+                PURPLE GLOW
+==================================================*/
+
+.love-glow{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(125,80,255,.16),
+        transparent 70%
+    );
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/*==================================================
+                CONTAINER
+==================================================*/
+
+.love-letter-container{
+
+    width:min(900px,92%);
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+/*==================================================
+                ICON
+==================================================*/
+
+.letter-icon{
+
+    font-size:5rem;
+
+    margin-bottom:25px;
+
+    filter:drop-shadow(
+        0 0 25px rgba(255,100,220,.45)
+    );
+
+}
+
+/*==================================================
+                SMALL HEADING
+==================================================*/
+
+.letter-small{
+
+    color:#d6baff;
+
+    text-transform:uppercase;
+
+    letter-spacing:8px;
+
+    font-size:.85rem;
+
+    margin-bottom:20px;
+
+}
+
+/*==================================================
+                MAIN HEADING
+==================================================*/
+
+.letter-heading{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,6vw,5.2rem);
+
+    line-height:1.1;
+
+    margin-bottom:28px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #ffe2fb,
+        #ff7ce8
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    text-shadow:
+        0 0 40px rgba(255,120,220,.15);
+
+}
+
+/*==================================================
+                DESCRIPTION
+==================================================*/
+
+.letter-description{
+
+    max-width:700px;
+
+    color:rgba(255,255,255,.78);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    margin-bottom:70px;
+
+}
+
+/*==================================================
+                ENVELOPE
+==================================================*/
+
+/* .envelope-area{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:16px;
+
+} */
+
+/*==================================================
+                NOTE
+==================================================*/
+
+.open-note{
+
+    color:#d8c8ff;
+
+    font-size:.95rem;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.love-letter{
+
+padding:120px 20px;
+
+}
+
+.letter-heading{
+
+font-size:4rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.love-letter{
+
+padding:100px 18px;
+
+}
+
+.letter-icon{
+
+font-size:4rem;
+
+}
+
+.letter-small{
+
+letter-spacing:5px;
+
+font-size:.75rem;
+
+}
+
+.letter-heading{
+
+font-size:3rem;
+
+}
+
+.letter-description{
+
+font-size:.95rem;
+
+line-height:1.8;
+
+margin-bottom:50px;
+
+}
+
+.open-note{
+
+font-size:.9rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.love-letter{
+
+padding:80px 16px;
+
+}
+
+.letter-heading{
+
+font-size:2.4rem;
+
+}
+
+.letter-description{
+
+font-size:.9rem;
+
+}
+
+.letter-icon{
+
+font-size:3.5rem;
+
+}
+
+/*===============================
+NOTE
+===============================*/
+
+.open-note{
+
+    margin-top:6px;
+
+    color:rgba(255,255,255,.55);
+
+    font-size:.88rem;
+
+    letter-spacing:1px;
+
+    font-style:italic;
+
+}
+
+}
+
+
+/*===============================
+BUTTON
+===============================*/
+.letter-open-btn{
+
+    padding:18px 42px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #ff5fc5,
+        #7b5cff
+    );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:all .35s ease;
+
+    box-shadow:
+
+    0 15px 35px rgba(255,95,197,.28);
+
+}
+
+.letter-open-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 25px 50px rgba(255,95,197,.45);
+
+}
+
+.letter-open-btn:active{
+
+    transform:scale(.97);
+
+}

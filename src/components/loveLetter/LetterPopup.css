@@ -1,0 +1,539 @@
+/*==================================================
+                OVERLAY
+==================================================*/
+
+.letter-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:40px 20px;
+
+    background:rgba(8,6,20,.75);
+
+    backdrop-filter:blur(20px);
+
+    overflow-y:auto;
+
+    z-index:9999;
+
+}
+
+/*==================================================
+                PURPLE GLOW
+==================================================*/
+
+.popup-glow{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(125,80,255,.18),
+            transparent 70%
+        );
+
+    filter:blur(80px);
+
+}
+
+/*==================================================
+                PAPER
+==================================================*/
+
+.letter-paper{
+
+    position:relative;
+
+    width:min(760px,100%);
+
+    margin:auto;
+
+    transform-style:preserve-3d;
+
+    perspective:1200px;
+
+    transform-origin:center;
+
+    will-change:transform;
+
+    min-height:auto;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:linear-gradient(
+        180deg,
+        #fffefb,
+        #fff9f2
+    );
+
+    border-radius:26px;
+
+    padding:20px;
+
+box-shadow:
+
+    0 18px 35px rgba(0,0,0,.18),
+
+    0 45px 90px rgba(0,0,0,.35),
+
+    0 0 50px rgba(125,80,255,.08);
+
+}
+
+/*=========================================
+        PAPER TEXTURE
+=========================================*/
+
+.letter-paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:26px;
+
+    background:
+
+        radial-gradient(
+            rgba(255,255,255,.55) 1px,
+            transparent 1px
+        );
+
+    background-size:18px 18px;
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+.letter-paper:hover{
+
+    transform:translateY(-3px);
+
+    transition:.35s;
+
+}
+
+
+.letter-inner{
+
+    position:relative;
+
+    border:2px solid rgba(230,190,120,.55);
+
+    border-radius:18px;
+
+    padding:45px;
+
+    box-sizing:border-box;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/*==================================================
+                CLOSE
+==================================================*/
+
+.popup-close{
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.popup-close:hover{
+
+    transform:rotate(90deg);
+
+    background:#8b5cf6;
+
+    color:white;
+
+}
+
+/*==================================================
+                DATE
+==================================================*/
+
+.letter-date{
+
+    text-align:center;
+
+    color:#9b7cff;
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+/*==================================================
+                TITLE
+==================================================*/
+
+.letter-paper h2{
+
+    text-align:center;
+
+    margin:18px 0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:3rem;
+
+    color:#41235f;
+
+}
+
+/* Divider */
+
+.paper-divider{
+
+    width:180px;
+
+    height:2px;
+
+    margin:30px auto 45px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #ff5ec8,
+
+        #d7a84c,
+
+        #ff5ec8,
+
+        transparent
+
+    );
+
+}
+
+/*==================================================
+                CONTENT
+==================================================*/
+
+.paper-content{
+
+    color:#4d4558;
+
+    font-size:1.08rem;
+
+    line-height:2.1;
+
+    white-space:pre-line;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+
+/*==================================================
+                TYPEWRITER
+==================================================*/
+.typewriter{
+
+    white-space:pre-line;
+
+    color:#4d4558;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+.cursor{
+
+    display:inline-block;
+
+    margin-left:2px;
+
+    color:#ff5fc5;
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+
+
+/*=========================================
+        CORNERS
+=========================================*/
+
+.corner{
+
+    position:absolute;
+
+    font-size:28px;
+
+    color:#d9b05c;
+
+    opacity:.8;
+
+    pointer-events:none;
+
+}
+
+.top-left{
+
+    top:18px;
+
+    left:22px;
+
+}
+
+.top-right{
+
+    top:18px;
+
+    right:22px;
+
+    transform:rotate(90deg);
+
+}
+
+.bottom-left{
+
+    bottom:18px;
+
+    left:22px;
+
+    transform:rotate(-90deg);
+
+}
+
+.bottom-right{
+
+    bottom:18px;
+
+    right:22px;
+
+    transform:rotate(180deg);
+
+}
+
+/*==================================================
+                FOOTER
+==================================================*/
+
+.paper-footer{
+
+    margin-top:70px;
+
+    text-align:right;
+
+}
+
+.paper-footer p{
+
+    color:#6d5b8f;
+
+    margin-bottom:8px;
+
+}
+
+.paper-footer h3{
+
+    font-size:2rem;
+
+    color:#b91c7d;
+
+    font-family:"Great Vibes",cursive;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+.letter-overlay{
+
+padding:20px 14px;
+
+align-items:flex-start;
+
+}
+
+.letter-paper{
+
+width:100%;
+
+max-height:92vh;
+
+padding:65px 25px 35px;
+
+border-radius:22px;
+
+}
+
+.popup-close{
+
+top:16px;
+
+right:16px;
+
+width:38px;
+
+height:38px;
+
+}
+
+.letter-date{
+
+font-size:.75rem;
+
+letter-spacing:2px;
+
+}
+
+.letter-paper h2{
+
+font-size:2rem;
+
+margin-top:15px;
+
+}
+
+.paper-content{
+
+font-size:.95rem;
+
+line-height:1.9;
+
+}
+
+.paper-footer{
+
+margin-top:40px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.letter-overlay{
+
+padding:10px;
+
+}
+
+.letter-paper{
+
+padding:60px 18px 30px;
+
+border-radius:18px;
+
+max-height:94vh;
+
+}
+
+.popup-close{
+
+top:12px;
+
+right:12px;
+
+width:34px;
+
+height:34px;
+
+font-size:15px;
+
+}
+
+.letter-date{
+
+font-size:.68rem;
+
+}
+
+.letter-paper h2{
+
+font-size:1.55rem;
+
+line-height:1.3;
+
+}
+
+.paper-divider{
+
+margin:20px auto 30px;
+
+}
+
+.paper-content{
+
+font-size:.88rem;
+
+line-height:1.8;
+
+}
+
+.paper-footer{
+
+margin-top:30px;
+
+}
+
+.paper-footer h3{
+
+    text-shadow:
+
+        0 0 18px rgba(255,90,180,.25);
+
+}
+
+}
+

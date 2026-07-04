@@ -1,0 +1,360 @@
+/*==================================================
+                LETTER WRAPPER
+==================================================*/
+
+.letter-card-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+}
+
+/*==================================================
+                LETTER
+==================================================*/
+
+.letter-card{
+
+    position:relative;
+
+    width:380px;
+
+    height:250px;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transform-style:preserve-3d;
+
+    background:linear-gradient(
+        145deg,
+        #fffefc,
+        #fdf6ff
+    );
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.28);
+
+    transition:.45s;
+
+}
+
+.letter-card:hover{
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.35);
+
+}
+
+/*==================================================
+                GOLD BORDER
+==================================================*/
+
+.letter-border{
+
+    position:absolute;
+
+    inset:12px;
+
+    border-radius:10px;
+
+    border:2px solid rgba(255,215,150,.8);
+
+    pointer-events:none;
+
+}
+
+/*==================================================
+                PAPER TEXTURE
+==================================================*/
+
+.letter-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    opacity:.5;
+
+}
+
+/*==================================================
+                RIBBON
+==================================================*/
+
+.letter-ribbon{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:85px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #ff71cb,
+
+        #8d63ff
+
+    );
+
+    opacity:.18;
+
+}
+
+/*==================================================
+                SEAL
+==================================================*/
+
+.letter-seal{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        #ff76ca,
+
+        #d91f75
+
+    );
+
+    box-shadow:
+
+        0 0 35px rgba(255,70,180,.45),
+
+        inset 0 5px 12px rgba(255,255,255,.25);
+
+    z-index:20;
+
+}
+
+/*==================================================
+                PURPLE GLOW
+==================================================*/
+
+.letter-glow{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:480px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(125,80,255,.20),
+
+        transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    z-index:-1;
+
+}
+
+/*==================================================
+                SHINE
+==================================================*/
+
+.letter-shine{
+
+    position:absolute;
+
+    top:-40px;
+
+    left:-120px;
+
+    width:70px;
+
+    height:380px;
+
+    transform:rotate(25deg);
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(255,255,255,.65),
+
+        transparent
+
+    );
+
+    animation:shineMove 5s linear infinite;
+
+}
+
+@keyframes shineMove{
+
+0%{
+
+left:-140px;
+
+}
+
+100%{
+
+left:500px;
+
+}
+
+}
+
+/*==================================================
+                BUTTON
+==================================================*/
+
+.open-letter-btn{
+
+    margin-top:35px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        90deg,
+        #ff61c7,
+        #7d5cff
+    );
+
+    box-shadow:
+
+        0 18px 40px rgba(255,90,190,.30);
+
+}
+
+.open-letter-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+.letter-card{
+
+width:310px;
+height:205px;
+
+}
+
+.letter-seal{
+
+width:70px;
+height:70px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.letter-card{
+
+width:260px;
+height:175px;
+
+}
+
+.letter-seal{
+
+width:58px;
+height:58px;
+font-size:20px;
+
+}
+
+.open-letter-btn{
+
+width:100%;
+
+}
+
+}
