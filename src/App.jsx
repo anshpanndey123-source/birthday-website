@@ -6,7 +6,7 @@ import SectionDivider from "./components/sectionDivider/SectionDivider";
 import LoveLetter from "./components/loveLetter/LoveLetter";
 import LoveDivider from "./components/divider/LoveDivider";
 import BirthdayWish from "./components/birthday/BirthdayWish";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
